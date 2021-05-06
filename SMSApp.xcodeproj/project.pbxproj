@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,9 @@
 		605E59E4264276560071B2A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 605E59E2264276560071B2A3 /* Main.storyboard */; };
 		605E59E6264276570071B2A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 605E59E5264276570071B2A3 /* Assets.xcassets */; };
 		605E59E9264276570071B2A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 605E59E7264276570071B2A3 /* LaunchScreen.storyboard */; };
+		605E59F22642850F0071B2A3 /* TwillowFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605E59F12642850F0071B2A3 /* TwillowFile.swift */; };
+		605E59F6264285A40071B2A3 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 605E59F5264285A40071B2A3 /* Alamofire */; };
+		60B6776A2643E8A70071ADA4 /* Cloudkitdemi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B677692643E8A70071ADA4 /* Cloudkitdemi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,8 @@
 		605E59E5264276570071B2A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		605E59E8264276570071B2A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		605E59EA264276570071B2A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		605E59F12642850F0071B2A3 /* TwillowFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwillowFile.swift; sourceTree = "<group>"; };
+		60B677692643E8A70071ADA4 /* Cloudkitdemi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloudkitdemi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				605E59F6264285A40071B2A3 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,10 +65,12 @@
 				605E59DC264276560071B2A3 /* AppDelegate.swift */,
 				605E59DE264276560071B2A3 /* SceneDelegate.swift */,
 				605E59E0264276560071B2A3 /* ViewController.swift */,
+				605E59F12642850F0071B2A3 /* TwillowFile.swift */,
 				605E59E2264276560071B2A3 /* Main.storyboard */,
 				605E59E5264276570071B2A3 /* Assets.xcassets */,
 				605E59E7264276570071B2A3 /* LaunchScreen.storyboard */,
 				605E59EA264276570071B2A3 /* Info.plist */,
+				60B677692643E8A70071ADA4 /* Cloudkitdemi.swift */,
 			);
 			path = SMSApp;
 			sourceTree = "<group>";
@@ -83,6 +91,9 @@
 			dependencies = (
 			);
 			name = SMSApp;
+			packageProductDependencies = (
+				605E59F5264285A40071B2A3 /* Alamofire */,
+			);
 			productName = SMSApp;
 			productReference = 605E59D9264276560071B2A3 /* SMSApp.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +121,9 @@
 				Base,
 			);
 			mainGroup = 605E59D0264276560071B2A3;
+			packageReferences = (
+				605E59F4264285A40071B2A3 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 605E59DA264276560071B2A3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +151,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60B6776A2643E8A70071ADA4 /* Cloudkitdemi.swift in Sources */,
 				605E59E1264276560071B2A3 /* ViewController.swift in Sources */,
 				605E59DD264276560071B2A3 /* AppDelegate.swift in Sources */,
+				605E59F22642850F0071B2A3 /* TwillowFile.swift in Sources */,
 				605E59DF264276560071B2A3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,6 +357,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		605E59F4264285A40071B2A3 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		605E59F5264285A40071B2A3 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 605E59F4264285A40071B2A3 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 605E59D1264276560071B2A3 /* Project object */;
 }
